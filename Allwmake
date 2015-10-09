@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -x
+
+wmake libso libLEMOS-2.4.x
+
+( cd applications ; wmake all solvers )
+( cd applications ; wmake all utilities )

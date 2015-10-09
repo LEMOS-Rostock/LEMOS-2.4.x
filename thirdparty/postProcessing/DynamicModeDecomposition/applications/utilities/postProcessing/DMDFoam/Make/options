@@ -1,0 +1,9 @@
+EXE_INC = \
+    -I$(LEMOSEXT)/thirdparty/postProcessing/DynamicModeDecomposition/src/postProcessing/DMD/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lDMD-2.4.x

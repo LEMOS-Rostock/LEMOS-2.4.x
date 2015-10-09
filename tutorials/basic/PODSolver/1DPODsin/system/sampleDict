@@ -1,0 +1,40 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM Extend Project: Open Source CFD        |
+|  \\    /   O peration     | Version:  2.4.x                               |
+|   \\  /    A nd           | Web:      www.extend-project.de                 |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      sampleDict;
+}
+ // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+interpolationScheme cellPoint;
+
+writeFormat     raw;
+
+sampleSets
+(
+    uniform
+    {
+        name            cut;
+        axis            distance;
+        start           (0 0 0);
+        end             (0.1 0 0);
+        nPoints         100;
+    }
+);
+
+fields
+(
+//    T
+//    TPODreconstruct
+    TPOD
+);
+
+// ************************************************************************* //

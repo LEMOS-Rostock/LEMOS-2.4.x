@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -x
+
+wclean src/postProcessing/DMD
+
+wclean applications/utilities/postProcessing/DMDFoam/

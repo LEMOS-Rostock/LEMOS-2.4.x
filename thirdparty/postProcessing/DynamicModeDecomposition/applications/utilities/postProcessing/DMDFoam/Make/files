@@ -1,0 +1,3 @@
+DMDFoam.C
+
+EXE = $(FOAM_APPBIN)/DMDFoam

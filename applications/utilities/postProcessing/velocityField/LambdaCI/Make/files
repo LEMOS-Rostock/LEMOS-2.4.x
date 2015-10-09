@@ -1,0 +1,4 @@
+
+LambdaCI.C
+
+EXE = $(FOAM_APPBIN)/LambdaCI

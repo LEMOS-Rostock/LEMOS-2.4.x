@@ -1,0 +1,11 @@
+EXE_INC = \
+    -I$(LEMOSEXT)/libLEMOS-2.4.x/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lLEMOS-2.4.x \
+    -lODE
+

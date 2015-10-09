@@ -1,0 +1,41 @@
+EXE_INC = \
+ -Wno-deprecated \
+ -I$(LIB_SRC)/dynamicMesh/lnInclude \
+ -I$(LIB_SRC)/triSurface/lnInclude \
+ -I$(LIB_SRC)/turbulenceModels \
+ -I$(LIB_SRC)/transportModels \
+ -I$(LIB_SRC)/finiteVolume/lnInclude \
+ -I$(LIB_SRC)/meshTools/lnInclude \
+ -I$(LIB_SRC)/sampling/lnInclude \
+ -I$(LIB_SRC)/sampling/meshToMeshInterpolation/meshToMesh \
+ -I$(LIB_SRC)/fvOptions/lnInclude \
+ -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+ -I$(LIB_SRC)/turbulenceModels/LES/LESdeltas/lnInclude \
+ -I$(LIB_SRC)/turbulenceModels/LES/LESfilters/lnInclude \
+ -I$(LIB_SRC)/postProcessing/functionObjects/field/fieldAverage/fieldAverage \
+ -I$(LIB_SRC)/postProcessing/functionObjects/field/fieldAverage/fieldAverageItem \
+ -I$(LIB_SRC)/postProcessing/functionObjects/forces/lnInclude \
+ -I$(LIB_SRC)/fileFormats/lnInclude \
+ -I$(LIB_SRC)/turbulenceModels/incompressible/LES/LESModel
+
+
+LIB_LIBS = \
+ -lfiniteVolume \
+ -lfluidThermophysicalModels \
+ -lspecie \
+ -lincompressibleTurbulenceModel \
+ -lcompressibleTurbulenceModel \
+ -lincompressibleRASModels \
+ -lincompressibleLESModels \
+ -lLESfilters \
+ -lLESdeltas \
+ -ltriSurface \
+ -ldynamicMesh \
+ -lfieldFunctionObjects \
+ -lgsl \
+ -lgslcblas \
+ -lmeshTools \
+ -lsampling \ 
+ -lfileFormats \
+ -lforces \
+ -lfvOptions 

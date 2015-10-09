@@ -1,0 +1,16 @@
+--- turbulenceModels/LES/LESfilters/LESfilter/LESfilter.C	2015-06-25 14:45:40.000000000 +0200
++++ LESfilter.C	2015-06-25 14:42:53.000000000 +0200
+@@ -40,10 +40,11 @@
+ Foam::autoPtr<Foam::LESfilter> Foam::LESfilter::New
+ (
+     const fvMesh& mesh,
+-    const dictionary& dict
++    const dictionary& dict,
++    word typeName
+ )
+ {
+-    const word filterType(dict.lookup("filter"));
++    const word filterType(dict.lookup(typeName));
+ 
+     dictionaryConstructorTable::iterator cstrIter =
+         dictionaryConstructorTablePtr_->find(filterType);

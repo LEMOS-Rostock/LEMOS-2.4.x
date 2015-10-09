@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for i in \
+ turbulenceModels/LES/LESfilters/LESfilter/LESfilter.H \
+ turbulenceModels/LES/LESfilters/LESfilter/LESfilter.C \
+; do
+ patch -N $FOAM_SRC/$i patches/`basename $i`.patch
+done
+
+cd $FOAM_SRC
+ turbulenceModels/Allwmake
+cd $LEMOSEXT

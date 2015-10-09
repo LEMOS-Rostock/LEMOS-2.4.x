@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -x
+
+wmake src/postProcessing/DMD
+
+wmake applications/utilities/postProcessing/DMDFoam/

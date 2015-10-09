@@ -1,0 +1,3 @@
+DMDModel/makeDMDModels.C
+
+LIB = $(FOAM_LIBBIN)/libDMD-2.4.x

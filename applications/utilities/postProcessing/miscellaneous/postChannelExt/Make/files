@@ -1,0 +1,4 @@
+postChannelExt.C
+channelIndex.C
+
+EXE = $(FOAM_APPBIN)/postChannelExt

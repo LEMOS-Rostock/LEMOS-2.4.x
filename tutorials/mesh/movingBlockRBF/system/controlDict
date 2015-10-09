@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM Extend Project: Open Source CFD        |
+|  \\    /   O peration     | Version:  2.4.x                                 |
+|   \\  /    A nd           | Web:      www.extend-project.de                 |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     icoDyMFoam;
+
+startFrom       startTime;
+
+startTime       0.0;
+
+stopAt          endTime;
+
+endTime         10.0;
+
+deltaT          0.01;
+
+writeControl    timeStep;
+
+writeInterval   5;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  15;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   12;
+
+graphFormat     raw;
+
+runTimeModifiable yes;
+
+adjustTimeStep yes;
+
+maxCo 0.5;
+
+maxDeltaT 0.25;
+
+libs ("libLEMOS-2.4.x.so");
+
+
+functions
+(
+    RBFMotion
+    {
+        type RBFMotion;
+        functionObjectLibs ("libRBFMotionFunction.so" "libLEMOS-2.4.x.so");
+	rotationAmplitude        0.9;
+        rotationFrequency        0.25;
+        translationAmplitude    (0.0 3.0 0.0);
+        translationFrequency    (0.0 0.25 0.0);
+        initialRotationOrigin    (0.0 0.0 0.0);
+    }
+);
+
+// ************************************************************************* //
